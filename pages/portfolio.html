@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Rumman Shahzad</title>
+    <meta name="description" content="Portfolio of web projects by Rumman Shahzad — TechVibez, RS-Group, and more.">
+
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/portfolio.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+</head>
+
+<body>
+
+<div class="cursor-dot"></div>
+<div class="cursor-outline"></div>
+<a href="https://wa.me/+923110476828" class="whatsapp-float" target="_blank">
+    <i class="fa-brands fa-whatsapp fa-bounce" style="color:#fff;"></i>
+</a>
+<canvas id="particles-canvas"></canvas>
+
+<div class="loader" id="loader">
+    <div class="loader-inner">
+        <div class="loader-logo">RS DEV <span>STUDIO.</span></div>
+        <div class="loader-bar"><div class="loader-progress"></div></div>
+    </div>
+</div>
+
+<!-- HEADER -->
+<header class="header" id="header">
+    <a href="../index.html" class="logo">Rumman<span>.</span></a>
+    <nav class="navbar">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="../index.html#about" class="nav-link">About</a>
+        <a href="../index.html#skills" class="nav-link">Skills</a>
+        <a href="portfolio.html" class="nav-link active">Portfolio</a>
+        <a href="../index.html#contact" class="nav-link">Contact</a>
+    </nav>
+    <div class="header-right">
+        <button id="theme-toggle" aria-label="Toggle theme"><i class="fa-solid fa-moon"></i></button>
+        <a href="https://wa.me/923110476828" class="hire-btn"><span>Hire Me</span><i class="fa-solid fa-arrow-right"></i></a>
+        <button class="menu-btn" id="menu-btn" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+</header>
+
+<div class="mobile-menu" id="mobile-menu">
+    <a href="../index.html" class="mob-link">Home</a>
+    <a href="services.html" class="mob-link">Services</a>
+    <a href="../index.html#about" class="mob-link">About</a>
+    <a href="../index.html#skills" class="mob-link">Skills</a>
+    <a href="portfolio.html" class="mob-link">Portfolio</a>
+    <a href="../index.html#contact" class="mob-link">Contact</a>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+    <div class="page-hero-bg-glow"></div>
+    <div class="page-hero-content">
+        <span class="eyebrow">MY WORK</span>
+        <h1>Featured <span class="gradient-text">Projects</span></h1>
+        <p>Real-world projects crafted with passion, precision, and purpose.</p>
+    </div>
+</section>
+
+<!-- PORTFOLIO FILTER + GRID -->
+<section class="portfolio-section reveal">
+
+    <!-- Filter Tabs -->
+    <div class="filter-tabs">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Websites</button>
+        <button class="filter-btn" data-filter="landing">Landing Pages</button>
+        <button class="filter-btn" data-filter="wp">WordPress</button>
+        <button class="filter-btn" data-filter="design">UI/UX</button>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="portfolio-grid" id="portfolio-grid">
+
+        <!-- Project 1 -->
+        <div class="portfolio-card glass-card" data-category="web" data-tilt>
+            <div class="portfolio-img-wrapper">
+                <img src="../assets/images/techvibez.jpg" alt="TechVibez Website">
+                <div class="portfolio-overlay">
+                    <a href="https://techvibez.tech" target="_blank" class="btn-overlay">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> View Live
+                    </a>
+                </div>
+            </div>
+            <div class="portfolio-info">
+                <span class="project-tag">Technology</span>
+                <h3>TechVibez</h3>
+                <p>A modern tech platform delivering the latest tech updates, software reviews, and digital insights.</p>
+                <div class="project-tech">
+                    <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                </div>
+                <a href="https://techvibez.tech" target="_blank" class="project-link">
+                    View Project <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="portfolio-card glass-card" data-category="landing" data-tilt>
+            <div class="portfolio-img-wrapper">
+                <img src="../assets/images/rs-group.jpg" alt="RS-Group Landing Page">
+                <div class="portfolio-overlay">
+                    <a href="https://rumman-web-dev.github.io/rs-group-landing-page/" target="_blank" class="btn-overlay">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> View Live
+                    </a>
+                </div>
+            </div>
+            <div class="portfolio-info">
+                <span class="project-tag">Finance</span>
+                <h3>RS-GROUP</h3>
+                <p>A professional financial landing page with clean UI, interactive business sections, and pricing plans.</p>
+                <div class="project-tech">
+                    <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                </div>
+                <a href="https://rumman-web-dev.github.io/rs-group-landing-page/" target="_blank" class="project-link">
+                    View Project <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- === ADD NEW PROJECT HERE ===
+             1. Copy this block below
+             2. Change data-category to: web / landing / wp / design
+             3. Update image src, title, description, tech tags, and live link
+             ================================ -->
+
+        <!-- Example Placeholder Project 3 (no image yet) -->
+        <div class="portfolio-card glass-card placeholder-card" data-category="web" data-tilt>
+            <div class="portfolio-img-wrapper no-img">
+                <div class="no-img-placeholder">
+                    <i class="fa-solid fa-image"></i>
+                    <span>Coming Soon</span>
+                </div>
+            </div>
+            <div class="portfolio-info">
+                <span class="project-tag">Fitness</span>
+                <h3>Gym Website</h3>
+                <p>Fitness website with membership plans, class schedules, and trainer profiles.</p>
+                <div class="project-tech">
+                    <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                </div>
+                <span class="project-link" style="opacity:0.4;cursor:default;">Coming Soon</span>
+            </div>
+        </div>
+
+        <div class="portfolio-card glass-card placeholder-card" data-category="web" data-tilt>
+            <div class="portfolio-img-wrapper no-img">
+                <div class="no-img-placeholder">
+                    <i class="fa-solid fa-image"></i>
+                    <span>Coming Soon</span>
+                </div>
+            </div>
+            <div class="portfolio-info">
+                <span class="project-tag">Food & Dining</span>
+                <h3>Restaurant Website</h3>
+                <p>Food ordering and restaurant showcase with menu management system.</p>
+                <div class="project-tech">
+                    <span>HTML</span><span>CSS</span><span>WordPress</span>
+                </div>
+                <span class="project-link" style="opacity:0.4;cursor:default;">Coming Soon</span>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CTA -->
+<section class="portfolio-cta-section reveal">
+    <div class="cta-box glass-card">
+        <h2>Have a project in <span class="gradient-text">mind?</span></h2>
+        <p>Let's collaborate and bring your vision to life.</p>
+        <a href="https://wa.me/923110476828" target="_blank" class="btn-primary">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>Start a Project</span>
+        </a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-top">
+        <div class="footer-brand">
+            <a href="../index.html" class="logo">Rumman<span>.</span></a>
+            <p>Building modern websites that help businesses grow and succeed online.</p>
+            <div class="footer-icons">
+                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.linkedin.com/in/rumman-shahzad-846935404/" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/rumman-web-dev" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <a href="../index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="../index.html#about">About</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="../index.html#contact">Contact</a>
+        </div>
+        <div class="footer-links">
+            <h4>Services</h4>
+            <a href="services.html">Landing Pages</a>
+            <a href="services.html">Business Websites</a>
+            <a href="services.html">WordPress Dev</a>
+            <a href="services.html">UI/UX Design</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 Rumman Shahzad. All Rights Reserved.</p>
+        <p>Crafted with <i class="fa-solid fa-heart" style="color:#ef4444"></i> in Pakistan</p>
+    </div>
+</footer>
+
+<button class="back-to-top" id="back-to-top"><i class="fa-solid fa-chevron-up"></i></button>
+
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/portfolio.js"></script>
+</body>
+</html>
