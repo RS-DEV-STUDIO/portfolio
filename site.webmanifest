@@ -1,0 +1,66 @@
+// RS DEV STUDIO — home.js
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  // TYPED
+  const el = document.querySelector('.typed');
+  if (el) {
+    const words = ['Web Developer','App Developer','Software Builder','UI/UX Designer','WordPress Expert'];
+    let wi=0, ci=0, del=false;
+    (function type(){
+      const w=words[wi];
+      el.textContent = del ? w.slice(0,--ci) : w.slice(0,++ci);
+      let t = del ? 55 : 100;
+      if (!del && ci===w.length) { t=1800; del=true; }
+      else if (del && ci===0) { del=false; wi=(wi+1)%words.length; t=350; }
+      setTimeout(type,t);
+    })();
+  }
+
+  // COUNTERS
+  const nums = document.querySelectorAll('.count-up');
+  new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting && !e.target.dataset.done) {
+      e.target.dataset.done=1;
+      const tgt = +e.target.dataset.n;
+      let v=0; const step=tgt/60;
+      (function go(){ v+=step; if(v<tgt){e.target.textContent=Math.ceil(v);requestAnimationFrame(go);}else e.target.textContent=tgt; })();
+    }
+  }), {threshold:.5}).observe && nums.forEach(n =>
+    new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting && !e.target.dataset.done) {
+        e.target.dataset.done=1;
+        const tgt=+e.target.dataset.n; let v=0; const step=tgt/60;
+        (function go(){ v+=step; if(v<tgt){e.target.textContent=Math.ceil(v);requestAnimationFrame(go);}else e.target.textContent=tgt; })();
+      }
+    }), {threshold:.5}).observe(n)
+  );
+
+  // SKILL BARS
+  document.querySelectorAll('.bar-f').forEach(b =>
+    new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting && !e.target.dataset.a) {
+        e.target.dataset.a=1;
+        setTimeout(()=>{ e.target.style.width=e.target.dataset.w+'%'; }, 200);
+      }
+    }), {threshold:.5}).observe(b)
+  );
+
+  // REVEAL (all)
+  document.querySelectorAll('.reveal').forEach(el =>
+    new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting) e.target.classList.add('in'); }), {threshold:.08}).observe(el)
+  );
+
+  // CONTACT FORM
+  const form = document.getElementById('cf');
+  if (form) form.addEventListener('submit', e => {
+    e.preventDefault();
+    const n=document.getElementById('cn').value;
+    const em=document.getElementById('ce').value;
+    const s=document.getElementById('cs').value;
+    const m=document.getElementById('cm').value;
+    const body=`Name: ${n}\n\nEmail: ${em}\n\nMessage:\n${m}`;
+    window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=rummanshahzad012@gmail.com&su=${encodeURIComponent(s)}&body=${encodeURIComponent(body)}`,'_blank');
+  });
+
+});
